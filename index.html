@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuvora - Temukan Produk Favoritmu</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fffaf8;
+  color: #514943;
+}
+
+header {
+  background: linear-gradient(135deg, #f8e9e5, #f5e8f1, #e9eff8);
+  text-align: center;
+  padding: 45px 20px 35px;
+  border-radius: 0 0 35px 35px;
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 38px;
+  letter-spacing: 5px;
+  color: #806c78;
+}
+
+.tagline {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #82747c;
+}
+
+.intro {
+  text-align: center;
+  padding: 25px 18px 15px;
+  line-height: 1.7;
+}
+
+.intro h2 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-size: 21px;
+  margin-bottom: 7px;
+}
+
+.intro p {
+  font-size: 13px;
+  color: #897e7a;
+}
+
+.container {
+  max-width: 850px;
+  margin: auto;
+  padding: 15px;
+}
+
+.search {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #eadedc;
+  border-radius: 30px;
+  outline: none;
+  background: white;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.categories {
+  display: flex;
+  gap: 9px;
+  overflow-x: auto;
+  padding: 2px 0 15px;
+}
+
+.category {
+  border: 1px solid #eadbdc;
+  background: white;
+  color: #76666d;
+  border-radius: 25px;
+  padding: 9px 16px;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.category.active,
+.category:hover {
+  background: #ddc6d1;
+  border-color: #ddc6d1;
+  color: white;
+}
+
+.section-title {
+  font-family: Georgia, serif;
+  font-size: 21px;
+  font-weight: normal;
+  margin: 12px 0 16px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.product {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 3px 14px rgba(100, 70, 70, 0.07);
+  transition: transform .2s;
+}
+
+.product:hover {
+  transform: translateY(-3px);
+}
+
+.product img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: #f2eae8;
+}
+
+.product-info {
+  padding: 12px;
+}
+
+.product-category {
+  color: #aa899b;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-name {
+  font-size: 13px;
+  margin: 7px 0;
+  line-height: 1.4;
+}
+
+.product-price {
+  font-size: 13px;
+  color: #9a7187;
+  font-weight: bold;
+}
+
+.buy {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  padding: 9px;
+  background: #f2e5eb;
+  color: #806578;
+  border-radius: 20px;
+  font-size: 11px;
+}
+
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 35px 10px;
+  color: #93858b;
+  font-size: 13px;
+}
+
+footer {
+  text-align: center;
+  padding: 35px 15px;
+  margin-top: 30px;
+  background: #f5ecee;
+  color: #887983;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+@media (min-width: 650px) {
+  .products {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">NUVORA</div>
+  <p class="tagline">Little Finds, Lovely Things</p>
+</header>
+
+<section class="intro">
+  <h2>Temukan Barang Favoritmu ✨</h2>
+  <p>Kumpulan pilihan menarik untuk menemani keseharianmu.</p>
+  <p>Scroll, pilih, dan temukan produk yang kamu suka!</p>
+</section>
+
+<main class="container">
+
+  <input
+    type="text"
+    id="search"
+    class="search"
+    placeholder="Cari produk yang kamu inginkan..."
+  >
+
+  <div class="categories" id="categories">
+    <button class="category active" data-category="Semua">Semua</button>
+    <button class="category" data-category="Fashion">Fashion</button>
+    <button class="category" data-category="Kecantikan">Kecantikan</button>
+    <button class="category" data-category="Rumah Tangga">Rumah Tangga</button>
+    <button class="category" data-category="Lifestyle">Lifestyle</button>
+    <button class="category" data-category="Lainnya">Lainnya</button>
+  </div>
+
+  <h2 class="section-title">Pilihan Nuvora ♡</h2>
+
+  <div class="products" id="products"></div>
+
+</main>
+
+<footer>
+  <strong>NUVORA</strong>
+  <p>Temukan inspirasi dan produk favoritmu di sini.</p>
+  <p>Beberapa tautan produk merupakan link affiliate.</p>
+  <p>Thank you for visiting ♡</p>
+</footer>
+
+<script>
+const productList = [
+  {
+    name: "Contoh Produk Fashion",
+    category: "Fashion",
+    price: "Cek harga di Shopee",
+    image: "https://placehold.co/600x600/f3e7eb/806578?text=Fashion",
+    link: "https://shopee.co.id/"
+  },
+  {
+    name: "Contoh Produk Kecantikan",
+    category: "Kecantikan",
+    price: "Cek harga di Shopee",
+    image: "https://placehold.co/600x600/f4e9e3/806578?text=Beauty",
+    link: "https://shopee.co.id/"
+  },
+  {
+    name: "Contoh Produk Rumah Tangga",
+    category: "Rumah Tangga",
+    price: "Cek harga di Shopee",
+    image: "https://placehold.co/600x600/e9edf3/806578?text=Home",
+    link: "https://shopee.co.id/"
+  },
+  {
+    name: "Contoh Produk Lifestyle",
+    category: "Lifestyle",
+    price: "Cek harga di Shopee",
+    image: "https://placehold.co/600x600/f1e9df/806578?text=Lifestyle",
+    link: "https://shopee.co.id/"
+  }
+];
+
+let selectedCategory = "Semua";
+
+function displayProducts() {
+  const searchValue = document.getElementById("search").value.toLowerCase();
+
+  const filtered = productList.filter(product => {
+    const matchCategory =
+      selectedCategory === "Semua" ||
+      product.category === selectedCategory;
+
+    const matchSearch =
+      product.name.toLowerCase().includes(searchValue);
+
+    return matchCategory && matchSearch;
+  });
+
+  const container = document.getElementById("products");
+
+  if (filtered.length === 0) {
+    container.innerHTML =
+      '<div class="empty">Produk tidak ditemukan ♡</div>';
+    return;
+  }
+
+  container.innerHTML = filtered.map(product => `
+    <a class="product"
+       href="${product.link}"
+       target="_blank"
+       rel="noopener noreferrer">
+      <img src="${product.image}" alt="${product.name}">
+      <div class="product-info">
+        <div class="product-category">${product.category}</div>
+        <div class="product-name">${product.name}</div>
+        <div class="product-price">${product.price}</div>
+        <span class="buy">Lihat Produk →</span>
+      </div>
+    </a>
+  `).join("");
+}
+
+document.getElementById("search").addEventListener("input", displayProducts);
+
+document.querySelectorAll(".category").forEach(button => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".category").forEach(item =>
+      item.classList.remove("active")
+    );
+
+    button.classList.add("active");
+    selectedCategory = button.dataset.category;
+    displayProducts();
+  });
+});
+
+displayProducts();
+</script>
+
+</body>
+</html>
