@@ -15,8 +15,8 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #FAF8F5;
-  color: #735F49;
+  background: #FFFAF8;
+  color: #514943;
 }
 
 /* HEADER NUVORA */
@@ -40,35 +40,32 @@ header {
   font-family: Georgia, serif;
   font-size: 38px;
   letter-spacing: 5px;
-  color: #937959;
+  color: #806C78;
 }
 
 .byline {
   margin-top: 5px;
   font-size: 13px;
-  color: #AB977F;
+  color: #A18D98;
 }
 
 .tagline {
   margin-top: 9px;
   font-size: 13px;
-  color: #937959;
+  color: #82747C;
 }
 
 .instagram {
   display: inline-block;
   margin-top: 12px;
   font-size: 12px;
-  color: #937959;
+  color: #806C78;
   text-decoration: none;
-}
-
-.instagram:hover {
-  color: #735F49;
 }
 
 /* INTRO */
 .intro {
+  background: #F8E9E5;
   text-align: center;
   padding: 28px 18px 20px;
   line-height: 1.7;
@@ -78,11 +75,12 @@ header {
   font-family: Georgia, serif;
   font-weight: normal;
   font-size: 22px;
+  color: #514943;
 }
 
 .intro p {
   font-size: 13px;
-  color: #937959;
+  color: #897E7A;
 }
 
 /* CONTAINER */
@@ -96,7 +94,7 @@ header {
 .search {
   width: 100%;
   padding: 15px 18px;
-  border: 1px solid #EDE5DB;
+  border: 1px solid #EADEDC;
   border-radius: 30px;
   outline: none;
   background: white;
@@ -105,7 +103,7 @@ header {
 }
 
 .search:focus {
-  border-color: #C7B299;
+  border-color: #DDC6D1;
 }
 
 /* KATEGORI */
@@ -124,9 +122,9 @@ header {
 }
 
 .category {
-  border: 1px solid #EDE5DB;
+  border: 1px solid #EADBDC;
   background: white;
-  color: #937959;
+  color: #76666D;
   border-radius: 13px;
   padding: 15px 12px;
   cursor: pointer;
@@ -142,13 +140,13 @@ header {
 
 .category span {
   font-size: 11px;
-  color: #AB977F;
+  color: #A18D98;
 }
 
 .category.active,
 .category:hover {
-  background: #AB977F;
-  border-color: #AB977F;
+  background: #DDC6D1;
+  border-color: #DDC6D1;
   color: white;
 }
 
@@ -166,7 +164,7 @@ header {
 }
 
 .section-subtitle {
-  color: #AB977F;
+  color: #96878C;
   font-size: 12px;
   margin-bottom: 16px;
 }
@@ -198,7 +196,7 @@ header {
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
-  background: #EDE5DB;
+  background: #F2EAE8;
 }
 
 .product-info {
@@ -206,7 +204,7 @@ header {
 }
 
 .product-category {
-  color: #AB977F;
+  color: #AA899B;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -219,7 +217,7 @@ header {
 }
 
 .product-code {
-  color: #937959;
+  color: #98748A;
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
@@ -230,8 +228,8 @@ header {
   text-align: center;
   margin-top: 10px;
   padding: 10px;
-  background: #EDE5DB;
-  color: #735F49;
+  background: #F2E5EB;
+  color: #806578;
   border-radius: 20px;
   font-size: 11px;
 }
@@ -241,7 +239,7 @@ header {
   grid-column: 1 / -1;
   text-align: center;
   padding: 35px 10px;
-  color: #AB977F;
+  color: #A18D98;
   font-size: 13px;
   line-height: 1.8;
 }
@@ -251,8 +249,8 @@ footer {
   text-align: center;
   padding: 35px 15px;
   margin-top: 35px;
-  background: #EDE5DB;
-  color: #735F49;
+  background: #F5E8F1;
+  color: #887983;
   font-size: 12px;
   line-height: 1.8;
 }
@@ -281,12 +279,10 @@ footer {
 
   <p class="tagline">Little Finds, Lovely Things</p>
 
-  <a
-    class="instagram"
-    href="https://www.instagram.com/withnuvora/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >@withnuvora</a>
+  <a class="instagram"
+     href="https://www.instagram.com/withnuvora/"
+     target="_blank"
+     rel="noopener noreferrer">@withnuvora</a>
 </header>
 
 <section class="intro">
@@ -371,8 +367,6 @@ footer {
 <script>
 
 // DATA PRODUK NUVORA
-// Setiap produk memiliki kode unik.
-
 const productList = [
   {
     code: "NV11",
