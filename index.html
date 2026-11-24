@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nuvora | Little Finds, Lovely Things</title>
+<title>NUVORA | Little Finds, Lovely Things</title>
 
 <style>
 * {
@@ -15,30 +15,59 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #fffaf8;
-  color: #514943;
+  background: #FAF8F5;
+  color: #735F49;
 }
 
+/* HEADER NUVORA */
 header {
-  background: linear-gradient(135deg,#f8e9e5,#f5e8f1,#e9eff8);
+  background: #FFFFFF;
   text-align: center;
-  padding: 45px 20px 35px;
-  border-radius: 0 0 35px 35px;
+  padding: 30px 20px 28px;
+  border-radius: 0 0 25px 25px;
+}
+
+.brand-logo {
+  width: 125px;
+  max-width: 40%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+  object-fit: contain;
 }
 
 .logo {
-  font-family: Georgia,serif;
+  font-family: Georgia, serif;
   font-size: 38px;
   letter-spacing: 5px;
-  color: #806c78;
+  color: #937959;
+}
+
+.byline {
+  margin-top: 5px;
+  font-size: 13px;
+  color: #AB977F;
 }
 
 .tagline {
-  margin-top: 10px;
+  margin-top: 9px;
   font-size: 13px;
-  color: #82747c;
+  color: #937959;
 }
 
+.instagram {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 12px;
+  color: #937959;
+  text-decoration: none;
+}
+
+.instagram:hover {
+  color: #735F49;
+}
+
+/* INTRO */
 .intro {
   text-align: center;
   padding: 28px 18px 20px;
@@ -46,26 +75,28 @@ header {
 }
 
 .intro h2 {
-  font-family: Georgia,serif;
+  font-family: Georgia, serif;
   font-weight: normal;
   font-size: 22px;
 }
 
 .intro p {
   font-size: 13px;
-  color: #897e7a;
+  color: #937959;
 }
 
+/* CONTAINER */
 .container {
   max-width: 900px;
   margin: auto;
   padding: 15px;
 }
 
+/* SEARCH */
 .search {
   width: 100%;
   padding: 15px 18px;
-  border: 1px solid #eadedc;
+  border: 1px solid #EDE5DB;
   border-radius: 30px;
   outline: none;
   background: white;
@@ -73,8 +104,13 @@ header {
   margin-bottom: 22px;
 }
 
+.search:focus {
+  border-color: #C7B299;
+}
+
+/* KATEGORI */
 .category-title {
-  font-family: Georgia,serif;
+  font-family: Georgia, serif;
   font-size: 21px;
   font-weight: normal;
   margin-bottom: 14px;
@@ -82,15 +118,15 @@ header {
 
 .categories {
   display: grid;
-  grid-template-columns: repeat(2,minmax(0,1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
   margin-bottom: 28px;
 }
 
 .category {
-  border: 1px solid #eadbdc;
+  border: 1px solid #EDE5DB;
   background: white;
-  color: #76666d;
+  color: #937959;
   border-radius: 13px;
   padding: 15px 12px;
   cursor: pointer;
@@ -106,13 +142,13 @@ header {
 
 .category span {
   font-size: 11px;
-  color: #a18d98;
+  color: #AB977F;
 }
 
 .category.active,
 .category:hover {
-  background: #ddc6d1;
-  border-color: #ddc6d1;
+  background: #AB977F;
+  border-color: #AB977F;
   color: white;
 }
 
@@ -121,22 +157,24 @@ header {
   color: white;
 }
 
+/* JUDUL PRODUK */
 .section-title {
-  font-family: Georgia,serif;
+  font-family: Georgia, serif;
   font-size: 21px;
   font-weight: normal;
   margin: 12px 0 5px;
 }
 
 .section-subtitle {
-  color: #96878c;
+  color: #AB977F;
   font-size: 12px;
   margin-bottom: 16px;
 }
 
+/* DAFTAR PRODUK */
 .products {
   display: grid;
-  grid-template-columns: repeat(2,minmax(0,1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 15px;
 }
 
@@ -147,7 +185,7 @@ header {
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 3px 14px rgba(100,70,70,.07);
+  box-shadow: 0 3px 14px rgba(100, 70, 50, .07);
   transition: transform .2s;
 }
 
@@ -160,7 +198,7 @@ header {
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
-  background: #f2eae8;
+  background: #EDE5DB;
 }
 
 .product-info {
@@ -168,7 +206,7 @@ header {
 }
 
 .product-category {
-  color: #aa899b;
+  color: #AB977F;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -181,7 +219,7 @@ header {
 }
 
 .product-code {
-  color: #98748a;
+  color: #937959;
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
@@ -192,38 +230,41 @@ header {
   text-align: center;
   margin-top: 10px;
   padding: 10px;
-  background: #f2e5eb;
-  color: #806578;
+  background: #EDE5DB;
+  color: #735F49;
   border-radius: 20px;
   font-size: 11px;
 }
 
+/* PRODUK TIDAK DITEMUKAN */
 .empty {
-  grid-column: 1/-1;
+  grid-column: 1 / -1;
   text-align: center;
   padding: 35px 10px;
-  color: #93858b;
+  color: #AB977F;
   font-size: 13px;
   line-height: 1.8;
 }
 
+/* FOOTER */
 footer {
   text-align: center;
   padding: 35px 15px;
   margin-top: 35px;
-  background: #f5ecee;
-  color: #887983;
+  background: #EDE5DB;
+  color: #735F49;
   font-size: 12px;
   line-height: 1.8;
 }
 
-@media (min-width:650px) {
+/* TAMPILAN DESKTOP */
+@media (min-width: 650px) {
   .categories {
-    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .products {
-    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 </style>
@@ -232,8 +273,20 @@ footer {
 <body>
 
 <header>
+  <img src="LOGO.png" alt="Logo NUVORA" class="brand-logo">
+
   <div class="logo">NUVORA</div>
+
+  <p class="byline">by Fifa Nuraidah</p>
+
   <p class="tagline">Little Finds, Lovely Things</p>
+
+  <a
+    class="instagram"
+    href="https://www.instagram.com/withnuvora/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >@withnuvora</a>
 </header>
 
 <section class="intro">
@@ -254,6 +307,7 @@ footer {
   <h2 class="category-title">Kategori Produk ♡</h2>
 
   <div class="categories" id="categories">
+
     <button class="category active" data-category="Semua">
       <strong>Semua Produk</strong>
       <span>Jelajahi semua pilihan</span>
@@ -293,9 +347,11 @@ footer {
       <strong>Lainnya</strong>
       <span>Kode kategori NV7</span>
     </button>
+
   </div>
 
   <h2 class="section-title" id="resultTitle">Pilihan Nuvora ♡</h2>
+
   <p class="section-subtitle" id="resultSubtitle">
     Temukan produk favoritmu.
   </p>
@@ -309,6 +365,7 @@ footer {
   <p>Temukan inspirasi dan produk favoritmu di sini.</p>
   <p>Beberapa tautan produk merupakan link affiliate.</p>
   <p>Thank you for visiting ♡</p>
+  <p>@withnuvora</p>
 </footer>
 
 <script>
@@ -326,13 +383,13 @@ const productList = [
     link: "https://s.shopee.co.id/1LhDZNtzT3"
   },
   {
-  code: "NV12",
-  name: "Reyora Sepatu Heels Shoes Wanita",
-  category: "NV1",
-  categoryName: "Fashion",
-  image: "NV12.png",
-  link: "https://s.shopee.co.id/5VX2QZ0TZe"
-},
+    code: "NV12",
+    name: "Reyora Sepatu Heels Shoes Wanita",
+    category: "NV1",
+    categoryName: "Fashion",
+    image: "NV12.png",
+    link: "https://s.shopee.co.id/5VX2QZ0TZe"
+  },
   {
     code: "NV13",
     name: "Sandal Slop Kekinia dan Sol Empuk",
